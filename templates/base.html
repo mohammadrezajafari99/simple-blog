@@ -1,0 +1,120 @@
+{%load static%}
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Modern Business - Start Bootstrap Template</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        
+        <link rel="stylesheet" href="{%  static 'css/noob.css' %}">
+        <link href="{% static  'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" />
+     
+     <style>
+ul li{
+    padding: 5px;
+}
+
+     </style>
+        <!-- Core theme CSS (includes Bootstrap)-->
+    </head>
+    <body class="d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light " style="background: #f5f5f5;">
+                <div class="container px-5">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 " id="nav">
+                            <li  class="nav-item"><a  class="nav-link p-3" href="{% url 'index' %}">خانه</a></li>
+                            {% if request.user.is_authenticated %}
+                            <li class="nav-item"><a class="nav-link p-3" href="{% url 'create' %}">پست جدید</a></li>
+                          {% endif %}
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle p-3" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">بلاگ</a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
+                                    <li><a class="dropdown-item p-3" href="blog-home.html">Blog Home</a></li>
+                                    <li><a  class="dropdown-item p-3" href="blog-post.html">Blog Post</a></li>
+                                </ul>
+                            </li>
+                            {% if request.user.is_authenticated %}
+                            
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle p-3" id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Hello {{request.user.username}}</a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
+                                    <li><a class="dropdown-item p-3" href="{% url  'account' %}">Account</a></li>
+                                    <li><a class="dropdown-item p-3" href="{% url 'logout' %}">LogOut</a></li>
+                                </ul>
+                            </li>
+                        
+                        {% else %}
+                        <li  class="nav-item"><a  class="nav-link ml-3 p-3" href="{% url 'register' %}">ثبت نام</a></li>
+
+                        <li class="nav-item"><a class="nav-link ml-3 p-3" href="{% url 'login' %}">لاگین</a></li>
+
+                        {% endif %}
+                        
+                        
+                        
+                        
+                        
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Header-->
+            <header class="bg-warning py-5">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center justify-content-center">
+                        <div class="col-lg-8 col-xl-7 col-xxl-6 ml-auto">
+                            <div class="my-5 text-center text-xl-start">
+                                <h1 class="display-5 fw-bolder text-light-50 mb-2">  تک بلاگ</h1>
+                                <p class="lead fw-normal text-light-50 mb-4">با جدیدترین اخبار محصولات با خبر شوید!</p>
+                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                    <a class="btn btn-outline-light text-dark btn-lg px-4 me-sm-3" href="#features">شروع</a>
+                                    <a class="btn btn-outline-light text-dark  btn-lg px-4" href="#!">اطلاعات بیشتر</a>
+                                
+                               
+                                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="{% static  'images/banner-1.jpg' %}" style="width: 100%;"/></div>
+                    </div>
+                </div>
+            </header>
+           
+
+            {% block content %}
+
+
+            {% endblock content%}
+
+
+
+        <!-- Footer-->
+        <footer class="bg-dark py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; mohammadrezajafari | made with love</div></div>
+                    <div class="col-auto">
+                        <a class="link-light small" href="#!">Privacy</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="#!">Terms</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="#!">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+        <!-- Core theme JS-->
+    </body>
+</html>

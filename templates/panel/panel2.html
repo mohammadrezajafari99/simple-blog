@@ -1,0 +1,260 @@
+{% load static   %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/panel2.css' %}">
+    <link href="{% static  'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" />
+
+<style>
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+   
+}
+
+
+
+#topnav{
+position: absolute;
+top: 0px;
+right: 213px;
+
+}
+#topnav2{
+position: relative;
+top:50px;
+right: 380px;
+
+}
+
+
+
+
+
+
+
+
+    
+</style>
+</head>
+<body >
+  <!-- navigation    -->
+<nav class="navbar navbar-expand-md navbar-light ">
+    <button   class="navbar-toggler bg-light mb-2" data-toggle="collapse" data-target="#mynav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class=" navbar-collapse collapse " id="mynav">
+    <div class="container-fluid">
+    <div class="row">
+    
+     <!-- sidebar -->
+    <div class="col-xl-2 col-lg-3 col-md-2 sidebar  fixed-top" id="cc">
+    <a href="" class="navbar-brand text-center text-white d-block mx-auto p-3 mb-3 bottom-border" >
+     <!-- <img src="/img/logo.png" class="text-left" style="margin: 5px;" width="70px" height="30px">نهون -->
+    نهون
+    </a>
+    
+    <div class="text-center bottom-border mb-2 pb-5">
+    <img src="{{pro.picture.url}}" class=" ml-3" width="60px"  height="60px" alt="">
+    <!-- <a href="" class=" text-white">محمدرضا جعفری</a> -->
+    <p>{{pro.email}}</p>
+    </div>
+    
+    <ul class="nav-bar text-center text-md-right list-unstyled    mt-4 flex-column p-0">
+    
+    <li class="nav-item sidebar-link"><a href="" class="nav-link current text-white p-3 mb-2">
+    <i class="fa fa-home fa-lg mr-2 ml-2"></i>
+ مشخصات
+    </a></li>
+    
+    <li class="nav-item sidebar-link"><a href="{% url 'create' %}" class="nav-link text-white p-3 mb-2">
+       
+        <i class=" fa fa-user fa-lg ml-2 mr-2"></i>
+پست جدید    </a></li>
+    
+    <li class="nav-item sidebar-link"><a href="" class="nav-link  text-white p-3 mb-2">
+        <i class="fa fa-envelope  fa-lg ml-2 mr-2"></i>
+        پست های من
+    </a></li>
+    
+    
+    <li class="nav-item sidebar-link"><a href="" class="nav-link text-white  p-3 mb-2">
+      
+        <i class=" fa fa-shopping-cart fa-lg ml-2 mr-2"> </i>
+       ویرایش
+    
+    </a></li>
+    
+    
+    <li class="nav-item sidebar-link"><a href="" class="nav-link text-white  p-3 mb-2">
+        
+        <i class=" fa fa-chart-line fa-lg ml-2 mr-2"></i>
+        نمودارها
+    </a></li>
+    
+    <li class="nav-item sidebar-link"><a href="" class="nav-link  text-white p-3 mb-2">
+       
+        <i class=" fa fa-table fa-lg ml-2 mr-2"></i>
+        تحلیل
+    </a></li>
+    
+    <li class="nav-item sidebar-link"><a href="" class="nav-link text-white  p-3 mb-2">
+        <!-- <img src="/img/Users.png" alt=""> -->
+        <i class=" fa fa-wrench fa-lg ml-2 mr-2"></i>
+     تنظیمات
+    </a></li>
+    
+    </ul>
+    </div>
+    
+    
+     <!-- end of sidebar -->
+    
+    <!-- topnav -->
+ <div class="col-xl-10 col-lg-9 col-md-10  bg-dark mr-auto " id="topnav">
+<div class="row ">
+<div class="col-md-4">
+
+    <h4 class="text-light text-right pt-3">داشبورد</h4>
+
+
+
+
+</div>
+
+
+
+<div class="col-md-5 my-4 my-md-0">
+    <form action="">
+    <div class="input-group">
+    
+    <button class="btn search-button">
+        <img  class="" src="/img/pp.jpg.png" alt="">
+    </button>
+    <input type="text" class="form-control "  id="search-input" placeholder="جستجو" name="" >
+    
+    </div>
+    
+    </form>  
+    </div>
+    <div class="col-md-3 p-0 text-center  ">
+    <ul class="navbar-nav  flex-row justify-content-between ml-2 ">
+    <li class="nav-item"><a href="" class="nav-link text-white p-0 m-0">
+       <i class="fa fa-car fa-lg  p-0  p-md-2 "></i>
+    
+    </a></li>
+    <li class="nav-item"><a href="" class="nav-link text-white p-0 m-0">
+    <i class="fa fa-envelope fa-lg  p-0 p-md-2"></i>
+    
+    </a></li>
+    <li class="nav-item mr-md-auto ">
+        <a  href=""  class="nav-link p-0 m-0" data-toggle="modal" >
+        <img src="/img/delete.png"   alt="" width="30px">
+    
+    
+    
+    
+    </a>
+    </li>
+    
+    </ul>
+    
+        
+    </div>
+    
+
+
+
+
+
+</div>
+
+
+
+
+
+ </div>
+    
+    
+    
+    <!-- end of topnav -->
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </nav>
+    <!-- end of navigation -->
+    
+    
+    
+
+
+
+<!-- progress /tasks -->
+<section>
+  
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10 col-lg-9 col-md-8 mr-auto">
+       <div class="row">
+       
+       <!-- progress -->
+           <div class="col-lg-8  mt-5 p-5  " id="topnav2">
+       
+    {% block content %}
+
+    {% endblock content %}
+     
+</div>
+       <!-- end of  progress -->
+       
+       
+       
+      
+       
+       
+       </div>
+       
+       
+       
+       
+            </div>
+        </div>   
+       </div>
+       
+           
+    
+    
+    </section>
+    <!-- end of progress /tasks -->
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

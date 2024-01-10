@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+
+
+<div class="form-container m-auto"style="width: 400px;" >
+
+<div class=" card uk-width-large uk-margin mt-5 mb-5 " >
+
+
+<div class="uk-card uk-card-small-uk uk-card-default uk-card-body shadow  " >
+ 
+    {% for message in messages %}
+
+    <p class="msg bg-dark mt-4">{{message}}</p>
+    
+    {% endfor %}
+    
+    <h3 class="text-center mt-3">LOGIN FORM</h3>
+
+<form  method="POST" class="text-left m-5">
+
+{% csrf_token %}
+
+
+
+<p class="space"><strong>Username</strong></p>
+
+<input type="text" name="username" id="" class="form-control" placeholder="Enter the username">
+
+<br>
+
+
+
+<p class="space"><strong>Password</strong></p>
+
+ <input type="password" name="password" id="" class="form-control" placeholder="Enter Password">
+<br>
+
+
+
+
+
+
+
+
+<button type="submit" class="btn btn-primary size " style="width: 100%;">Login</button>
+
+
+
+</form>
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+{% endblock content %}

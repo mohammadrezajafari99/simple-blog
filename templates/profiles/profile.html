@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<style>
+
+.placeholderContainer{
+    width: 300px;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.placehoderimg{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.placehoderimg img{
+width: auto;
+height:auto;
+
+border-radius: 40%;
+
+}
+
+
+
+
+</style>
+
+
+
+
+
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-4">
+<div class="placeholderContainer">
+<div class="placehoderimg">
+    <img src="{{profile.picture.url}}"  class="rounded" alt="">
+</div>
+
+<h4 class="mt-4" style="margin-top: 20px;font-weight: bold;"><strong>{{profile.name}}</strong></h4>
+<h4 style="text-align: center;">{{profile.profession}}</h4>
+<div class="socials"></div>
+
+</div>
+
+
+</div>
+
+
+<div class="col-lg-8">
+
+<h3><strong>about me</strong></h3>
+<p class="bio">
+{{profile.about}}
+
+</p>
+<br><b></b>
+<h3><strong>my articles</strong></h3>
+
+<div class="row justify-content-center">
+
+    <!-- پستای مال خود یوزر میار -->
+{% for post in profile.post_set.all %} 
+
+<div class="col-sm-12 col-md-4" style="margin-bottom: 10px;">
+
+
+<div class="card" style="width: 15rem;margin-bottom: 10px;">
+<img src="{{post.image.url}}" class="card-top-img" alt="">
+
+<div class="card-body">
+
+<h5 class="card-title"><strong>{{post.title}}</strong></h5>
+<p class="card-text">{{post.body | safe | truncatechars:'100'}}</p>
+<a href=""  class="btn btn-primary">Read more</a>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+{% endfor %}
+
+
+</div>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+{% endblock content %}

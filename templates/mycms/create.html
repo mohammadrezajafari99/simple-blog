@@ -1,0 +1,58 @@
+{% extends 'panel/panel2.html'  %}
+
+{% block content %}
+
+
+<style>
+
+#container{
+   
+    box-shadow: rgba(0,0,0,0.2) 0px 3px 8px;
+    height: auto;
+    padding: 30px 20px 20px 20px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    border: 1px solid rgb(230, 196, 196);
+}
+#container h3{
+    text-align: center;
+}
+
+
+</style>
+
+
+
+<div class="container mt-5" id="container">
+<h3><strong>create a post</strong></h3>
+<form  method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+{{form}}
+
+<input class="btn btn-success w-100" type="submit" value="Create">
+
+
+
+</form>
+
+
+
+</div>
+
+<script>
+
+
+let inputfields= document.getElementsByTagName('input')
+let bodyfield= document.getElementById('id_body')
+let selectfield= document.getElementById('id_category')
+
+for(let i=0 ; i<inputfields.length;i++){
+    inputfields[i].classList.add('form-control')
+}
+
+bodyfield.classList.add('form-control')
+selectfield.classList.add('form-control')
+
+</script>
+
+{% endblock content %}

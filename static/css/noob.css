@@ -1,0 +1,11 @@
+
+
+#nav li a {
+  text-decoration: none;
+  transition: all 0.4s;
+
+}
+#nav li a:hover {
+  background: rgb(235, 36, 159);
+border-radius: 10px;
+}

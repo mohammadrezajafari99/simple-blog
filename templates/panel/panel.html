@@ -1,0 +1,1276 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پنل ادمین</title>
+ 
+
+</head>
+<body style="background: #eee;">
+ <!-- navigation    -->
+<nav class="navbar navbar-expand-md navbar-light ">
+<button   class="navbar-toggler bg-light mb-2" data-toggle="collapse" data-target="#mynav">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class=" navbar-collapse collapse " id="mynav">
+<div class="container-fluid">
+<div class="row">
+
+ <!-- sidebar -->
+<div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top" id="cc">
+<a href="" class="navbar-brand text-center text-white d-block mx-auto p-3 mb-3 bottom-border" >
+ <!-- <img src="/img/logo.png" class="text-left" style="margin: 5px;" width="70px" height="30px">نهون -->
+نهون
+</a>
+
+<div class="text-center bottom-border mb-2 pb-3">
+<img src="/img/جعفري 000.JPG" class="rounded-circle ml-3" width="30px" alt="">
+<a href="" class=" text-white">محمدرضا جعفری</a>
+
+</div>
+
+<ul class="nav-bar text-center text-md-right list-unstyled    mt-4 flex-column p-0">
+
+<li class="nav-item sidebar-link"><a href="" class="nav-link current text-white p-3 mb-2">
+<i class="fa fa-home fa-lg mr-2 ml-2"></i>
+داشبورد
+</a></li>
+
+<li class="nav-item sidebar-link"><a href="" class="nav-link text-white p-3 mb-2">
+   
+    <i class=" fa fa-user fa-lg ml-2 mr-2"></i>
+    کاربران
+</a></li>
+
+<li class="nav-item sidebar-link"><a href="" class="nav-link  text-white p-3 mb-2">
+    <i class="fa fa-envelope  fa-lg ml-2 mr-2"></i>
+    پیام ها
+</a></li>
+
+
+<li class="nav-item sidebar-link"><a href="" class="nav-link text-white  p-3 mb-2">
+  
+    <i class=" fa fa-shopping-cart fa-lg ml-2 mr-2"> </i>
+    فروش
+
+</a></li>
+
+
+<li class="nav-item sidebar-link"><a href="" class="nav-link text-white  p-3 mb-2">
+    
+    <i class=" fa fa-chart-line fa-lg ml-2 mr-2"></i>
+    نمودارها
+</a></li>
+
+<li class="nav-item sidebar-link"><a href="" class="nav-link  text-white p-3 mb-2">
+   
+    <i class=" fa fa-table fa-lg ml-2 mr-2"></i>
+    تحلیل
+</a></li>
+
+<li class="nav-item sidebar-link"><a href="" class="nav-link text-white  p-3 mb-2">
+    <!-- <img src="/img/Users.png" alt=""> -->
+    <i class=" fa fa-wrench fa-lg ml-2 mr-2"></i>
+ تنظیمات
+</a></li>
+
+</ul>
+</div>
+
+
+ <!-- end of sidebar -->
+
+<!-- topnav -->
+<div class="col-xl-10 col-lg-8 col-md-8 bg-dark fixed-top py-2 mr-auto  " id="topnav">
+<div class="row">
+<div class="col-md-4">
+
+ <h4 class="text-light text-right pt-3">داشبورد</h4>
+
+
+</div>
+
+<div class="col-md-5 my-4 my-md-0">
+<form action="">
+<div class="input-group">
+
+<button class="btn search-button">
+    <img  class="" src="/img/pp.jpg.png" alt="">
+</button>
+<input type="text" class="form-control "  id="search-input" placeholder="جستجو" name="" >
+
+</div>
+
+</form>  
+</div>
+<div class="col-md-3 p-0 text-center  ">
+<ul class="navbar-nav  flex-row justify-content-between ml-2 ">
+<li class="nav-item"><a href="" class="nav-link text-white p-0 m-0">
+   <i class="fa fa-car fa-lg  p-0  p-md-2 "></i>
+
+</a></li>
+<li class="nav-item"><a href="" class="nav-link text-white p-0 m-0">
+<i class="fa fa-envelope fa-lg  p-0 p-md-2"></i>
+
+</a></li>
+<li class="nav-item mr-md-auto ">
+    <a  href=""  class="nav-link p-0 m-0" data-toggle="modal" >
+    <img src="/img/delete.png"   alt="" width="30px">
+
+
+
+
+</a>
+</li>
+
+</ul>
+
+    
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+<!-- end of topnav -->
+</div>
+
+</div>
+
+</div>
+
+</nav>
+<!-- end of navigation -->
+
+
+
+
+<!-- modal -->
+
+
+<div class="modal" id="logoutmodal">
+
+    <div class="modal-dialog">
+    
+    <div class="modal-content">
+    
+    <div class="modal-header">
+    
+    <h4>آیا میخواهید خارج شوید؟</h4>
+    
+    </div>
+    <div class="modal-body">
+    <p class="text-muted">در صورت خروج برای دسترسی به پنل باید مجددا وارد شوید</p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-success" data-dismiss="modal">میمانم</button>
+    
+        <button class="btn btn-danger" >خارج می شوم</button>
+    
+    </div>
+    
+    
+    </div>
+    
+    
+    </div>
+    
+    
+    
+    
+    </div>
+
+<!-- end of modal -->
+
+
+<!-- cards -->
+
+<section class="">
+
+
+<div class="container-fluid">
+<div class="row">
+ <div class="col-xl-10 col-lg-9 col-md-8 mr-auto">
+
+<div class="row mb-5 mt-2 pt-md-5">
+
+   <!-- card  -->
+<div class="col-lg-3 col-md-6 p-2">
+<div class="card card-common">
+<div class="card-body">
+<div class="d-flex align-items-center justify-content-between ">
+<div class="text-secondary">
+<h5>فروش</h5>
+<h5 class="">30 میلیون</h5>
+
+</div>
+
+<i class="fa fa-car fa-lg"></i>
+
+
+</div>
+
+</div>
+<div class="card-footer text-secondary">
+    <i class="fa fa-user fa-lg"></i>
+<span class="mr-2">بروزرسانی</span>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+<!-- card -->
+ <!-- card  -->
+<div class="col-lg-3 col-md-6 p-2">
+<div class="card card-common ">
+<div class="card-body">
+<div class="d-flex justify-content-between align-items-center">
+    <div class="text-secondary">
+        <h5>فروش</h5>
+        <h5 class="">30 میلیون</h5>
+        
+        </div>
+        
+        <i class="fa fa-car fa-lg"></i>
+        
+</div>
+
+
+</div>
+
+<div class="card-footer text-secondary">
+
+    <i class="fa fa-user fa-lg"></i>
+    <span class="mr-2">بروزرسانی</span>
+    
+    
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+</div>
+
+<!-- card -->
+
+ <!-- card  -->
+ <div class="col-lg-3 col-md-6 p-2">
+    <div class="card card-common ">
+    <div class="card-body">
+    <div class="d-flex justify-content-between align-items-center">
+        <div class="text-secondary">
+            <h5>فروش</h5>
+            <h5 class="">30 میلیون</h5>
+            
+            </div>
+            
+            <i class="fa fa-car fa-lg"></i>
+            
+    </div>
+    
+    
+    </div>
+    
+    <div class="card-footer text-secondary">
+    
+        <i class="fa fa-user fa-lg"></i>
+        <span class="mr-2">بروزرسانی</span>
+        
+        
+    
+    
+    
+    
+    </div>
+    
+    
+    
+    </div>
+    
+    
+    
+    
+    </div>
+    
+    <!-- card -->
+ <!-- card  -->
+ <div class="col-lg-3 col-md-6 p-2">
+    <div class="card card-common ">
+    <div class="card-body">
+    <div class="d-flex justify-content-between align-items-center">
+        <div class="text-secondary">
+            <h5>فروش</h5>
+            <h5 class="">30 میلیون</h5>
+            
+            </div>
+            
+            <i class="fa fa-car fa-lg"></i>
+            
+    </div>
+    
+    
+    </div>
+    
+    <div class="card-footer text-secondary">
+    
+        <i class="fa fa-user fa-lg"></i>
+        <span class="mr-2">بروزرسانی</span>
+        
+        
+    
+    
+    
+    
+    </div>
+    
+    
+    
+    </div>
+    
+    
+    
+    
+    </div>
+    
+    <!-- card -->
+
+
+
+</div>
+
+
+
+
+ </div>   
+</div>
+</div>
+
+</section>
+
+<!-- end of cards -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- progress /tasks -->
+<section>
+<div class="container-fluid">
+ <div class="row">
+     <div class="col-xl-10 col-lg-9 col-md-8 mr-auto">
+<div class="row">
+
+<!-- progress -->
+    <div class="col-lg-6 text-right">
+
+<div class="bg-dark rounded text-white p-4 ">
+
+    <h4 class="mb-4">پروژه ها</h4>
+
+
+    <!-- projects -->
+<h6 class="mb-2  mt-4" >کتابخانه آنلاین</h6>
+    <div class="progress" style="height: 20px;">
+        <div class="progress-bar progress-bar-striped bg-danger " style="width: 40%;">
+
+40%
+  </div>
+
+
+
+</div>
+    <!--end of  projects -->
+
+
+    <h6 class="mb-2  mt-4" >اپلیکیشن اسنپ</h6>
+    <div class="progress" style="height: 20px;">
+        <div class="progress-bar progress-bar-striped bg-warning" style="width: 22%;">
+
+22%
+  </div>
+
+
+
+</div>
+<h6 class="mb-2  mt-4" >هاست و سرور</h6>
+    <div class="progress" style="height: 20px;">
+        <div class="progress-bar progress-bar-striped bg-success " style="width: 85%;">
+
+85%
+  </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+
+<!-- end of  progress -->
+
+
+
+
+<!-- tasks -->
+<div class="col-lg-6">
+<h4 class="text-muted mb-4 text-center">تسک ها</h4>
+
+<div class="container-fluid">
+
+
+  <div class="row bg-white py-3  task-border mb-4 bg-light">
+<div class="col-1">
+
+<input type="checkbox" checked>
+</div>
+<div class="col-9 text-right">
+آماده کردن سمت بک اند
+</div>
+<div class="col-1">
+    <a href="" class="text-secondary" data-toggle="tooltip"  data-placement="top"   data-html="true"  title="<h6> حذف </h6>">
+       <i class="fa fa-home fa-lg"></i>
+    </a>
+</div>
+<div class="col-1">
+    <a href="" class="text-secondary" data-toggle="tooltip"  data-placement="top"   data-html="true"  title="<h6> حذف </h6>">
+        <i class="fa fa-home fa-lg"></i>
+     </a>
+
+</div>
+
+
+
+
+
+
+
+</div>  
+
+</div>
+
+
+<div class="container-fluid bg-dark">
+
+
+    <div class="row py-3   task-border mb-4 align-items-center">
+  <div class="col-1">
+  
+  <input type="checkbox" checked>
+  </div>
+  <div class="col-9 text-right">
+  آماده کردن سمت بک اند
+  </div>
+  <div class="col-1">
+      <a href="" class="text-secondary" data-toggle="tooltip"  data-placement="top"   data-html="true"  title="<h6> حذف </h6>">
+         <i class="fa fa-home fa-lg"></i>
+      </a>
+  </div>
+  <div class="col-1">
+      <a href="" class="text-secondary" data-toggle="tooltip"  data-placement="top"   data-html="true"  title="<h6> حذف </h6>">
+          <i class="fa fa-home fa-lg"></i>
+       </a>
+  
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  </div>  
+  
+  </div>
+  
+  <div class="container-fluid ">
+
+
+    <div class="row py-3 mb-4  task-border bg-danger">
+  <div class="col-1">
+  
+  <input type="checkbox" checked>
+  </div>
+  <div class="col-9 text-right">
+  آماده کردن سمت بک اند
+  </div>
+  <div class="col-1">
+      <a href="" class="text-secondary" data-toggle="tooltip"  data-placement="top"   data-html="true"  title="<h6> حذف </h6>">
+         <i class="fa fa-home fa-lg"></i>
+      </a>
+  </div>
+  <div class="col-1">
+      <a href="" class="text-secondary" data-toggle="tooltip"  data-placement="top"   data-html="true"  title="<h6> حذف </h6>">
+          <i class="fa fa-home fa-lg"></i>
+       </a>
+  
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  </div>  
+  
+  </div>
+ 
+</div>
+
+<!-- end of  tasks -->
+
+
+
+
+
+
+</div>
+
+
+
+
+     </div>
+ </div>   
+</div>
+
+
+
+
+</section>
+<!-- end of progress /tasks -->
+
+
+<!-- tables -->
+<section>
+
+<div class="container-fluid">
+<div class="row mb-4">
+<div class="col-xl-10 col-lg-9 col-md-8 mr-auto">
+
+<div class="row">
+<div class="col-lg-6 mb-5 mb-lg-0" >
+<h3 class="text-muted text-center mb-3 mt-3">پرداختی ها</h3>
+
+<table class="table table-dark table-hover text-center ">
+
+<thead>
+<tr>
+<th>#</th>
+<th>نام</th>
+<th>تاریخ</th>
+<th>مبلغ</th>
+<th>وضعیت</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+1
+</td>
+
+<td>
+محمد
+</td>
+<td>
+10تیر
+</td>
+<td>
+1000تومان
+</td>
+<td>
+<span class="badge badge-success py-2 w-75">در انتظار پرداخت</span>
+</td> 
+
+
+
+</tr>
+
+<tr>
+    <td>
+    1
+    </td>
+    
+    <td>
+    محمد
+    </td>
+    <td>
+    10تیر
+    </td>
+    <td>
+    1000تومان
+    </td>
+    <td>
+    <span class="badge badge-success py-2 w-75">در انتظار پرداخت</span>
+    </td> 
+    
+    
+    
+    </tr>
+    
+    <tr>
+        <td>
+        1
+        </td>
+        
+        <td>
+        محمد
+        </td>
+        <td>
+        10تیر
+        </td>
+        <td>
+        1000تومان
+        </td>
+        <td>
+        <span class="badge badge-success py-2 w-75">در انتظار پرداخت</span>
+        </td> 
+        
+        
+        
+        </tr>
+        
+
+
+        <tr>
+            <td>
+            1
+            </td>
+            
+            <td>
+            محمد
+            </td>
+            <td>
+            10تیر
+            </td>
+            <td>
+            1000تومان
+            </td>
+            <td>
+            <span class="badge badge-success py-2 w-75">در انتظار پرداخت</span>
+            </td> 
+            
+            
+            
+            </tr>
+            
+
+
+
+</tbody>
+
+
+</table>
+<ul class="pagination justify-content-center">
+    <li class="page-item"><a href="" class="page-link py-2 px-3">&laquo;</a></li>
+    <li class="page-item"><a href="" class="page-link py-2 px-3">3</a></li>
+    <li class="page-item"><a href="" class="page-link py-2 px-3">2</a></li>
+    <li class="page-item active"><a href="" class="page-link py-2 px-3">1</a></li>
+    <li class="page-item"><a href="" class="page-link py-2 px-3">&raquo;</a></li>
+    
+    
+    
+    </ul>
+
+</div>
+<div class="col lg-6">
+    <h3 class="text-muted text-center mb-3 mt-3">تیکت های اخیر</h3>
+<table class="table text-center bg-light table-striped ">
+    
+<th>#</th>
+<th>نام</th>
+<th>تاریخ</th>
+<th>مبلغ</th>
+<th>وضعیت</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+1
+</td>
+
+<td>
+محمد
+</td>
+<td>
+10تیر
+</td>
+<td>
+1000تومان
+</td>
+<td>
+<span class="badge badge-success py-2 w-75">در انتظار پرداخت</span>
+</td> 
+
+
+
+</tr>
+
+<tr>
+    <td>
+    1
+    </td>
+    
+    <td>
+    محمد
+    </td>
+    <td>
+    10تیر
+    </td>
+    <td>
+    1000تومان
+    </td>
+    <td>
+    <span class="badge badge-success py-2 w-75">در انتظار پرداخت</span>
+    </td> 
+    
+    
+    
+    </tr>
+    
+    <tr>
+        <td>
+        1
+        </td>
+        
+        <td>
+        محمد
+        </td>
+        <td>
+        10تیر
+        </td>
+        <td>
+        1000تومان
+        </td>
+        <td>
+        <span class="badge badge-success py-2 w-75">در انتظار پرداخت</span>
+        </td> 
+        
+        
+        
+        </tr>
+        
+
+
+        <tr>
+            <td>
+            1
+            </td>
+            
+            <td>
+            محمد
+            </td>
+            <td>
+            10تیر
+            </td>
+            <td>
+            1000تومان
+            </td>
+            <td>
+            <span class="badge badge-success py-2 w-75">در انتظار پرداخت</span>
+            </td> 
+            
+            
+            
+            </tr>
+            
+
+
+
+</tbody>
+
+
+</table >
+<ul class="pagination justify-content-center">
+<li class="page-item"><a href="" class="page-link py-2 px-3">&laquo;</a></li>
+<li class="page-item active"><a href="" class="page-link py-2 px-3">3</a></li>
+<li class="page-item"><a href="" class="page-link py-2 px-3">2</a></li>
+<li class="page-item"><a href="" class="page-link py-2 px-3">1</a></li>
+<li class="page-item"><a href="" class="page-link py-2 px-3">&raquo;</a></li>
+
+
+
+</ul>
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+
+<!-- end of tables -->
+
+
+<!-- activeies / quickpost -->
+<section>
+<div class="container-fluid">
+<div class="row">
+ <div class="col-xl-10 col-lg-9 col-md-8 mr-auto">
+
+<div class="row">
+ <!-- posts -->
+ 
+    <div class="col-lg-7">
+<h4 class="text-muted text-right mb-4 mr-2">فعالیت های اخیر</h4>
+<div id="myaccordian">
+    <div class="card">
+        <div class="card-header">
+        <button class="btn  btn-block btn-light text-right" data-toggle="collapse" data-target="#collapse1">
+        
+        <img src="/img/avatar.JPG" alt="" class="ml-2 rounded" width="50px " height="50px">
+        محمد یک گفتگوی جدید ایجاد کرد
+        </button>
+        
+        </div>
+        
+        <div class="collapse" data-parent="#myaccordian" id="collapse1">
+        
+        <div class="card-body">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. At adipisci neque voluptas 
+            impedit odit? Eaque magni esse sequi impedit sed.
+        
+        </div>
+        
+        </div>
+        
+        </div>
+        
+
+    <div class="card">
+        <div class="card-header">
+        <button class="btn btn-block btn-light text-right " data-toggle="collapse" data-target="#collapse2">
+            <img src="/img/avatar.JPG" alt="" class="ml-2 rounded" width="50px " height="50px">
+            محمد یک گفتگوی جدید ایجاد کرد
+        
+        </button>
+        <div class="collapse" data-parent="#myaccordian" id="collapse2">
+            <div class="card-body">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. At adipisci neque voluptas 
+                impedit odit? Eaque magni esse sequi impedit sed.
+            
+            </div>
+            
+        
+        
+        
+        </div>
+        
+            
+        </div>
+        
+        
+       </div>
+   <div class="card">
+                <div class="card-header">
+                <button class="btn btn-block btn-light text-right " data-toggle="collapse" data-target="#collapse3">
+                    <img src="/img/avatar.JPG" alt="" class="ml-2 rounded" width="50px " height="50px">
+                    محمد یک گفتگوی جدید ایجاد کرد
+                
+                </button>
+                <div class="collapse" data-parent="#myaccordian" id="collapse3">
+                    <div class="card-body">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. At adipisci neque voluptas 
+                        impedit odit? Eaque magni esse sequi impedit sed.
+                    
+                    </div>
+                    
+                
+                
+                
+                </div>
+                
+                    
+                </div>
+                
+                
+    </div>
+                
+                
+                 
+  <div class="card">
+                        <div class="card-header">
+                        <button class="btn btn-block btn-light text-right " data-toggle="collapse" data-target="#collapse4">
+                            <img src="/img/avatar.JPG" alt="" class="ml-2 rounded" width="50px " height="50px">
+                            محمد یک گفتگوی جدید ایجاد کرد
+                        
+                        </button>
+                        <div class="collapse" data-parent="#myaccordian" id="collapse4">
+                            <div class="card-body">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. At adipisci neque voluptas 
+                                impedit odit? Eaque magni esse sequi impedit sed.
+                            
+                            </div>
+                            
+                        
+                        
+                        
+                        </div>
+                        
+                            
+                        </div>
+                        
+                        
+     </div>
+                        
+                        
+   <div class="card">
+                                <div class="card-header">
+                                <button class="btn btn-block btn-light text-right " data-toggle="collapse" data-target="#collapse5">
+                                    <img src="/img/avatar.JPG" alt="" class="ml-2 rounded" width="50px " height="50px">
+                                    محمد یک گفتگوی جدید ایجاد کرد
+                                
+                                </button>
+                                <div class="collapse" data-parent="#myaccordian" id="collapse5">
+                                    <div class="card-body">
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. At adipisci neque voluptas 
+                                        impedit odit? Eaque magni esse sequi impedit sed.
+                                    
+                                    </div>
+                                    
+                                
+                                
+                                
+                                </div>
+                                
+                                    
+                                </div>
+                                
+                                
+  </div>
+                                
+                               
+        
+
+</div>
+
+ </div>   
+
+ <!--end of  posts -->
+
+
+<div class="col-lg-5 mt-5">
+
+<div class="card rounded">
+ <div class="card-body">
+    <h5 class="text-muted text-center mb-4">پست جدید</h5>
+ 
+
+    <ul class="list-inline text-center py-3">
+
+        <li class="list-inline-item">
+         <a href="">
+        <img src="/img/Users.png" alt="">
+        <span class="h6 text-muted ">وضعیت</span>
+        
+        </a>
+        
+        </li>
+        <li class="list-inline-item px-3">
+            <a href="">
+           <img src="/img/Users.png" alt="">
+           <span class="h6 text-muted ">تصویر</span>
+           
+           </a>
+           
+           </li>
+           <li class="list-inline-item">
+            <a href="">
+           <img src="/img/Users.png" alt="">
+           <span class="h6 text-muted ">مکان</span>
+           
+           </a>
+           
+           </li>
+           
+        </ul>
+
+        <form action="">
+
+           <div class="form-group">
+<input type="text" name="" id=""  class="form-control py-2 mb-3"  placeholder="یه چیزی بنویس">
+<button class="btn btn-block text-light bg-info  py-2 mb-5">ارسال</button>
+
+
+           </div>
+            
+            </form>
+
+
+</div>   
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+ </div>   
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</section>
+
+
+
+<!-- end of  activeies / quickpost -->
+
+
+<!-- footer -->
+
+
+
+<footer class="bg-dark">
+<div class="container-fluid">
+ <div class="row">
+ <div class="clo-xl-10 col-lg-9 col-md-8 mr-auto">
+<div class="row">
+  <div class="col-lg-4 col-sm-6 text-white text-right">
+
+    <h5 class="pb-3 mt-3 ">درباره ما</h5>
+    <p class="lh-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quam beatae enim laudantium.</p>
+    
+    
+
+    
+  </div>  
+  <div class="col-lg-2 col-sm-6 ">
+    <h5 class="pb-3 mt-3">صفحات</h5>
+    <ul class="list-unstyled ">
+      <li><a href="" class="footer-link">خانه</a></li>
+      <li><a href="" class="footer-link">افتخارات</a></li>
+      <li><a href="" class="footer-link">گالری</a></li>
+      <li><a href="" class="footer-link">مربی ها</a></li>
+  <li><a href="" class="footer-link">پلن ها</a></li>
+  <li><a href="" class="footer-link">ارتباط با ما</a></li>
+  
+    
+    </ul>
+  </div>
+
+  <div class="col-lg-2 col-sm-6 ">
+    <h5 class="pb-3 mt-3">کمک میخواهید؟</h5>
+  
+    <ul class="list-unstyled ">
+      <li><a href="" class="footer-link">پشتیبانی</a></li>
+      <li><a href="" class="footer-link">مشاوره تغذیه</a></li>
+      <li><a href="" class="footer-link">برنامه لاغری</a></li>
+      <li><a href="" class="footer-link">اطلاعیه ها</a></li>
+      <li><a href="" class="footer-link">oxigen@gmail.com</a></li>
+  
+  
+    
+    </ul>
+  
+  </div>
+  <div class="col-lg-4 col-sm-6 text-center ">
+    <h5 class="pb-3 mt-3">درباره ما</h5>
+  <p class="lh-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis, blanditiis.</p>
+  
+  <form action="" class="mb-3">
+  
+  <div class="input-group">
+  <input type="text" class="form-control" placeholder="ایمیل">
+  <!-- این دیو پایینی باعث چپسبیدن میشه -->
+  <div class="input-group-append">
+  <button class="btn btn-danger text-white">ارسال</button>
+  
+  </div>
+  
+  
+  
+  </div>
+  
+  
+  </form>
+  
+  <ul class="list-inline text-center">
+  <li class="list-inline-item"><img src="/img/instagram.png "  class="" alt=""></li>
+  <li class="list-inline-item"><img src="/img/twitter.png" alt=""></li>
+  <li class="list-inline-item"><img src="/img/google-plus.png" alt=""></li>
+  <li class="list-inline-item"><img src="/img/facebook-color.png" alt="" width="40px" height="40px"></li>
+  
+  </ul>
+  </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+ </div>    
+ </div>   
+</div>
+
+
+
+
+
+
+
+
+
+
+</footer>
+
+<!-- end of footer -->
+
+
+
+
+<!-- <script src="/static/js/jquery-3.6.0.min.js"></script>
+<script src="/static/js/popper.min.js"></script> -->
+<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+
+<script>
+    $(function(){
+    $('[data-toggle="tooltip"]').tooltip()
+    
+    });
+    
+    
+    </script>
+    
+    
+
+<script src="./panel.js"></script>
+</body>
+</html>

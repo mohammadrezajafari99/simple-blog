@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+
+
+<div class="form-container m-auto"style="width: 400px;" >
+
+<div class=" card uk-width-large uk-margin mt-5 mb-5 " >
+
+
+<div class="uk-card uk-card-small-uk uk-card-default uk-card-body shadow  " >
+    <h3 class="text-center mt-3">SIGNUP FORM</h3>
+
+<form  method="POST" class="text-left m-5">
+
+
+{% csrf_token %}
+
+<p class="space"><strong>Username</strong></p>
+
+<!-- <input type="text" name="username" id="" class="form-control" placeholder="Enter the username"> -->
+{{form.username}}
+<br>
+
+
+<p class="space"><strong>Email</strong></p>
+{{form.email}}
+<!-- <input type="email" name="email" id="" class="form-control" placeholder="Enter Email"> -->
+<br>
+
+
+<p class="space"><strong>Password</strong></p>
+{{form.password1}}
+<!-- <input type="password" name="password1" id="" class="form-control" placeholder="Enter Password"> -->
+<br>
+
+
+<p class="space"><strong>Confirm Password</strong></p>
+{{form.password2}}
+<!-- <input type="password" name="password1" id="" class="form-control" placeholder="Confirm Password"> -->
+<br>
+
+
+
+
+{{form.err}}
+
+<button type="submit" class="btn btn-primary size " style="width: 100%;">register</button>
+
+
+
+
+
+</form>
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}
